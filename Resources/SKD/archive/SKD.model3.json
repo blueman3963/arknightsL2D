@@ -1,0 +1,94 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "SKD.moc3",
+		"Textures": [
+			"SKD.4096/texture_00.png"
+		],
+		"Physics": "SKD.physics3.json",
+		"DisplayInfo": "SKD.cdi3.json",
+		"Motions": {
+			"": [
+				{
+					"File": "motion/Scene1.motion3.json"
+				},
+				{
+					"File": "motion/scared.motion3.json"
+				},
+				{
+					"File": "motion/smile.motion3.json"
+				}
+			],
+			"x-Idle": [
+				{
+					"File": "motion/idle 1.motion3.json"
+				},
+				{
+					"File": "motion/idle 2.motion3.json"
+				},
+				{
+					"File": "motion/idle 3.motion3.json"
+				}
+			],
+			"TapHead": [
+				{
+					"File": "motion/line1 hair.motion3.json",
+					"Sound": "voice/01 hair.wav"
+				},
+				{
+					"File": "motion/line3 dream.motion3.json",
+					"Sound": "voice/03 dream.wav"
+				},
+				{
+					"File": "motion/line6 safe.motion3.json",
+					"Sound": "voice/06 safe.wav"
+				},
+				{
+					"File": "motion/line7 papa.motion3.json",
+					"Sound": "voice/07 papa.wav"
+				}
+			],
+			"TapBody": [
+				{
+					"File": "motion/line2 chest.motion3.json",
+					"Sound": "voice/02 b.wav"
+				},
+				{
+					"File": "motion/line4 death.motion3.json",
+					"Sound": "voice/04 death.wav"
+				},
+				{
+					"File": "motion/line5 close.motion3.json",
+					"Sound": "voice/05 close.wav"
+				}
+			]
+		}
+	},
+	"Groups": [
+		{
+			"Target": "Parameter",
+			"Name": "EyeBlink",
+			"Ids": [
+				"ParamEyeLOpen",
+				"ParamEyeROpen"
+			]
+		},
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": [
+				"ParamMouthOpenY"
+			]
+		}
+	],
+	"HitAreas": [
+		{
+			"Id": "HitArea",
+			"Name": "Head"
+		},
+		{
+			"Id": "HitArea2",
+			"Name": "Body"
+		}
+	]
+}

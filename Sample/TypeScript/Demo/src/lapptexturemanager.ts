@@ -10,6 +10,8 @@ import Csm_csmVector = csmvector.csmVector;
 import csmVector_iterator = csmvector.iterator;
 import {gl} from "./lappdelegate";
 
+import { Loading } from "./_loadingprogress" 
+
 /**
  * テクスチャ管理クラス
  * 画像読み込み、管理を行うクラス。
@@ -62,6 +64,7 @@ export class LAppTextureManager
 
         // データのオンロードをトリガーにする
         let img = new Image();
+        Loading.startload(fileName);
         img.onload = () =>
         {
             // テクスチャオブジェクトの作成
@@ -92,6 +95,8 @@ export class LAppTextureManager
             let textureInfo: TextureInfo = new TextureInfo();
             if(textureInfo != null)
             {
+                Loading.loaded(fileName);
+
                 textureInfo.fileName = fileName;
                 textureInfo.width = img.width;
                 textureInfo.height = img.height;

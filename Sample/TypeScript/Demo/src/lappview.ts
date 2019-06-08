@@ -46,6 +46,7 @@ export class LAppView
      */
     public initialize(): void
     {
+
         let width: number, height: number;
         width = canvas.width;
         height = canvas.height;
@@ -148,6 +149,7 @@ export class LAppView
         textureManager.createTextureFromPngFile(resourcesPath + imageName, false, initBackGroundTexture);
         
         // 歯車画像初期化
+        /*
         imageName = LAppDefine.GearImageName;
         let initGearTexture = (textureInfo: TextureInfo): void =>
         {
@@ -159,6 +161,7 @@ export class LAppView
         };
 
         textureManager.createTextureFromPngFile(resourcesPath + imageName, false, initGearTexture);
+        */
 
         // シェーダーを作成
         if(this._programId == null)

@@ -1,6 +1,6 @@
 export function Audio (n:string) {
-    let all = document.querySelectorAll('audio');
-    all.forEach(a => {
+    let allLines = document.querySelectorAll('.line');
+    allLines.forEach(a => {
         if(!a.paused) {
             a.pause()
             a.currentTime = 0
@@ -9,6 +9,7 @@ export function Audio (n:string) {
     let id = n.split('line')[1].substr(0,1);
     let audioName = '#v_0' + id;
     let audio = <HTMLVideoElement> document.querySelector(audioName);
+    audio.currentTime = 0;
 
     let subtitle = document.querySelector('.subtitle');
     let script = [

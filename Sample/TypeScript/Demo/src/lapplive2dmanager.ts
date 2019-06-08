@@ -15,7 +15,6 @@ import { LAppDefine } from "./lappdefine";
 import { LAppPal } from "./lapppal";
 import { canvas } from "./lappdelegate";
 
-
 export let s_instance: LAppLive2DManager = null;
 
 /**

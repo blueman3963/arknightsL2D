@@ -50,8 +50,12 @@ export namespace LAppDefine
 
     // 外部定義ファイル（json）と合わせる
     export const MotionGroupIdle: string = "Idle"; // アイドリング
-    export const MotionGroupTapBody: string = "TapBody"; // 体をタップしたとき
-    export const MotionGroupTapHead: string = "TapHead";
+    export const MotionGroupTapBody1: string = "TapBody1"; // 体をタップしたとき
+    export const MotionGroupTapHead1: string = "TapHead1";
+    export const MotionGroupTapBody2: string = "TapBody2"; // 体をタップしたとき
+    export const MotionGroupTapHead2: string = "TapHead2";
+    export const MotionGroupTapBody3: string = "TapBody3"; // 体をタップしたとき
+    export const MotionGroupTapHead3: string = "TapHead3";
 
     // 外部定義ファイル（json）と合わせる
     export const HitAreaNameHead: string = "Head";

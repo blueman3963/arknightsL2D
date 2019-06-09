@@ -280,8 +280,6 @@ export namespace Live2DCubismFramework
             const tx: number = this._modelMatrix.invertTransformX(pointX);
             const ty: number = this._modelMatrix.invertTransformY(pointY);
 
-            console.log('target:',top, bottom)
-
             let screenW =  window.innerWidth;
             let screenH = window.innerHeight;
 

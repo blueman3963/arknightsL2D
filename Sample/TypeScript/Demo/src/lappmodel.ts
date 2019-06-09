@@ -50,6 +50,8 @@ import {TextureInfo} from "./lapptexturemanager";
 import "whatwg-fetch";
 
 import { Audio } from "./audioCtrl";
+import { trustSetup, trust } from './_trust'
+
 
 function createBuffer(path: string, callBack: any): void
 {

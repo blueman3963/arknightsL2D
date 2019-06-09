@@ -28,15 +28,7 @@
 					"File": "motion/smile.motion3.json"
 				}
 			],
-			"TapHead": [
-				{
-					"File": "motion/line1 hair.motion3.json",
-					"Sound": "voice/01 hair.wav"
-				},
-				{
-					"File": "motion/line3 dream.motion3.json",
-					"Sound": "voice/03 dream.wav"
-				},
+			"TapHead1": [
 				{
 					"File": "motion/line7 papa.motion3.json",
 					"Sound": "voice/07 papa.wav"
@@ -46,15 +38,31 @@
 					"Sound": "voice/06 safe.wav"
 				}
 			],
-			"TapBody": [
+			"TapHead2": [
 				{
-					"File": "motion/line2 chest.motion3.json",
-					"Sound": "voice/02 b.wav"
-				},
+					"File": "motion/line1 hair.motion3.json",
+					"Sound": "voice/01 hair.wav"
+				}
+			],
+			"TapHead3": [
+				{
+					"File": "motion/line3 dream.motion3.json",
+					"Sound": "voice/03 dream.wav"
+				}
+			],
+			"TapBody1": [
 				{
 					"File": "motion/line4 death.motion3.json",
 					"Sound": "voice/04 death.wav"
-				},
+				}
+			],
+			"TapBody2": [
+				{
+					"File": "motion/line2 chest.motion3.json",
+					"Sound": "voice/02 b.wav"
+				}
+			],
+			"TapBody3": [
 				{
 					"File": "motion/line5 close.motion3.json",
 					"Sound": "voice/05 close.wav"

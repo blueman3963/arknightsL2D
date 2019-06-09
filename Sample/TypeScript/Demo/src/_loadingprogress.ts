@@ -1,4 +1,5 @@
 import { appControl } from './_AppCtrl';
+import { trust } from './_trust'
 
 let Loading = new appControl.loadingProgress
 
@@ -29,6 +30,7 @@ function audioPreload () {
 
                     if(document.querySelector(".loading") == null) {
                         console.log('全波形载入完成')
+                        trust.trustGrow()
                     }
                 }
 

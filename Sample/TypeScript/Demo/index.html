@@ -54,6 +54,7 @@
             opacity: 1;
             color: white;
             transition-duration: 0.5s;
+            z-index: 999;
         }
         .hide {
             opacity: 0
@@ -67,6 +68,34 @@
             border: 1px solid white;
             cursor: pointer;
             transform: translate(-50%, -50%);
+        }
+
+        .trust {
+            position: fixed;
+            left: 20px;
+            top: 20px;
+            color: white;
+            font-size: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 400;
+            letter-spacing: 0;
+            text-shadow: 0 0 2px #000;
+        }
+        .title {
+            font-size: 12px;
+        }
+
+
+        .bar {
+            width: 100%;
+            height: 10px;
+            background-color: rgba(255,255,255,0.3);
+            margin-top: 5px;
+        }
+        .fill {
+            width: 0;
+            height: 10px;
+            background-color: rgba(255,255,255);
         }
     </style>
 </head>
@@ -115,7 +144,7 @@
             
     </div>
     
-    <audio class="bgm loading">
+    <audio class="bgm loading" loop="loop">
         <source src="./Resources/SKD/bgm/bgm.wav" type="audio/wav">
     </audio>
 
@@ -126,7 +155,21 @@
     <div class='loadscreen'>
         <div class='log'>
         </div>>
+        <div class='sound'>点击确认加载</div>
     </div>
-    <div class='sound'>点击确认加载</div>
+
+    <div class='trust'>
+        <div class='trustlv'>
+            00%
+        </div>
+        <div class='title'>信赖值</div>
+
+
+
+        <div class='bar'><div id='fill1' class='fill'></div></div>
+        <div class='bar'><div id='fill2' class='fill'></div></div>
+        <div class='bar'><div id='fill3' class='fill'></div></div>
+
+    </div>
 </body>
 </html>

@@ -16,6 +16,8 @@ import {LAppLive2DManager} from "./lapplive2dmanager";
 import {LAppDefine} from "./lappdefine";
 
 import { audioPreload } from './_loadingprogress'
+import { trustSetup, trust } from './_trust'
+
 
 export let canvas: HTMLCanvasElement = null;
 export let s_instance: LAppDelegate = null;
@@ -63,6 +65,7 @@ export class LAppDelegate
     public initialize(): boolean
     {
         audioPreload()
+        trustSetup()
         // キャンバスの取得
         canvas = <HTMLCanvasElement>document.getElementById("SAMPLE");
         canvas.width = window.innerWidth;

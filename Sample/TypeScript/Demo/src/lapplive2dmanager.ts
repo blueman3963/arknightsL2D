@@ -15,6 +15,9 @@ import { LAppDefine } from "./lappdefine";
 import { LAppPal } from "./lapppal";
 import { canvas } from "./lappdelegate";
 
+import { trust } from './_trust'
+
+
 export let s_instance: LAppLive2DManager = null;
 
 /**
@@ -123,7 +126,23 @@ export class LAppLive2DManager
                     LAppPal.printLog("[APP]hit area: [{0}]", LAppDefine.HitAreaNameHead);
                 }
                 //this._models.at(i).setRandomExpression();
-                this._models.at(i).startRandomMotion(LAppDefine.MotionGroupTapHead, LAppDefine.PriorityNormal);
+                let group
+                switch(trust.trustPhase()) {
+                    case 1:
+                        group = LAppDefine.MotionGroupTapHead1
+                        break;
+                    case 2:
+                        group = LAppDefine.MotionGroupTapHead2
+                        break;
+                    case 3:
+                        group = LAppDefine.MotionGroupTapHead3
+                        break;
+                    default:
+                        group = LAppDefine.MotionGroupTapHead1
+                        break;
+                }
+                this._models.at(i).startRandomMotion(group, LAppDefine.PriorityNormal);
+                trust.burstTrust('head')
             }
             else if(this._models.at(i).hitTest(LAppDefine.HitAreaNameBody, x, y))
             {
@@ -131,7 +150,24 @@ export class LAppLive2DManager
                 {
                     LAppPal.printLog("[APP]hit area: [{0}]", LAppDefine.HitAreaNameBody);
                 }
-                this._models.at(i).startRandomMotion(LAppDefine.MotionGroupTapBody, LAppDefine.PriorityNormal);
+
+                let group
+                switch(trust.trustPhase()) {
+                    case 1:
+                        group = LAppDefine.MotionGroupTapBody1
+                        break;
+                    case 2:
+                        group = LAppDefine.MotionGroupTapBody2
+                        break;
+                    case 3:
+                        group = LAppDefine.MotionGroupTapBody3
+                        break;
+                    default:
+                        group = LAppDefine.MotionGroupTapBody1
+                        break;
+                }
+                this._models.at(i).startRandomMotion(group, LAppDefine.PriorityNormal);
+                trust.burstTrust('body')
             }
         }
     }

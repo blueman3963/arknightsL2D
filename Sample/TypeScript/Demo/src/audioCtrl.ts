@@ -1,5 +1,5 @@
 export function Audio (n:string) {
-    let allLines = <HTMLVideoElement> document.querySelectorAll('.line');
+    let allLines = document.querySelectorAll('.line');
     allLines.forEach(a => {
         if(!a.paused) {
             a.pause()
